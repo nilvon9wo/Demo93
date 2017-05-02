@@ -1,0 +1,30 @@
+<!-- 
+ - Controller Component Communication
+ - @see http://wiki.developerforce.com/page/Controller_Component_Communication
+ -->
+<apex:page controller="VF_PageControllerImplemented" showHeader="false">
+	<apex:stylesheet value="{!$Resource.VF_PageComponentControllerCommunication_CSS}" /> 
+	<center>
+		<apex:outputPanel layout="block" styleClass="headerPanel" >
+			<h1>Sample Illustrating How to Establish Communication Between Page and MULTIPLE ComponentS</h1>
+		</apex:outputPanel>
+		<apex:outputPanel layout="block" styleClass="componentPanel" >
+			<h2>Components Shown Below:</h2>
+			<!--  Take notice of the key attribute in use; this is optional but required for multiple component support -->
+			<c:VF_PageCommunicator pageControllerIndicator="{!this}" keyIndicator="component1" />
+			<!--  Take notice this second component; not possible without the key attribute (or an otherwise different implementation) -->
+			<c:VF_PageCommunicator pageControllerIndicator="{!this}" keyIndicator="component2" />
+		</apex:outputPanel>
+		<apex:outputPanel layout="block" styleClass="commandPanel" >
+			<apex:form >
+				<apex:outputText value="Clicking the buttons below will call the method on the component controller to increment the initial value from the component above." /><br/>
+				<apex:commandButton action="{!callComponent1ControllerMethod}" value="Call Componenent Controller Method for first component" rerender="output"  styleClass="commandButton" /><br/>
+				<apex:commandButton action="{!callComponent2ControllerMethod}" value="Call Componenent Controller Method for second component" rerender="output" styleClass="commandButton" /><br/>
+			</apex:form>
+		</apex:outputPanel>
+		<apex:outputPanel id="output" styleClass="pageOutputPanel">
+				<p>This is in the <strong>first</strong> component current int value: <strong><apex:outputText value="{!component1Controller.intValue}" /></strong></p>
+				<p>This is in the <strong>second</strong> component current int value:<strong><apex:outputText value="{!component2Controller.intValue}" /></strong></p>
+		</apex:outputPanel>
+	</center>
+</apex:page>

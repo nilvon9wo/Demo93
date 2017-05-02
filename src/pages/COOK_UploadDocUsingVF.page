@@ -1,0 +1,41 @@
+<!-- 
+	 Uploading a Document using Visualforce and a Custom Controller
+	 @see http://developer.force.com/cookbook/recipe/uploading-a-document-using-visualforce-and-a-custom-controller
+ -->
+<apex:page controller="COOK_UploadDocUsingVFPageController">
+	<apex:sectionHeader title="VUploading a Document using Visualforce and a Custom Controller" subtitle="File Upload Example" />
+	
+	<apex:form enctype="multipart/form-data">
+		<apex:pageMessages />
+		
+		<apex:pageBlock title="Upload a File">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!upload}" value="Save" />
+			</apex:pageBlockButtons>
+			
+			<apex:pageBlockSection id="block1" showHeader="false" columns="2">
+			
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="fileName" value="File Name"/>
+					<apex:inputText id="fileName" value="{!document.name}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="file" value="File"/>
+					<apex:inputFile id="file" value="{!document.body}" filename="{!document.name}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="description" value="Description"/>
+					<apex:inputTextarea id="description" value="{!document.description}"  />
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel for="keywords" value="Keywords"/>
+					<apex:inputText id="keywords" value="{!document.keywords}"  />
+				</apex:pageBlockSectionItem>
+				
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page controller="TH_ExchangeRateVFController" action="{!init}">
+    <apex:pageBlock title="Rates">
+        <apex:pageBlockTable value="{!Rates}" var="rate">
+            <apex:column value="{!rate.BaseCurrency__c}" />
+            <apex:column value="{!rate.ToCurrency__c}" />
+            <apex:column value="{!rate.Rate__c}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

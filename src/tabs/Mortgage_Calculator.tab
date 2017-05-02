@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <icon>Tab_Icons/Mortgage_Calculator_Icon.png</icon>
+    <label>Mortgage Calculator</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom118: TV Widescreen</motif>
+    <page>MORT_MortgageCalculatorFlow</page>
+</CustomTab>

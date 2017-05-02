@@ -1,0 +1,17 @@
+<!--  @see: https://developer.salesforce.com/page/Controller_Component_Communication -->
+<apex:component controller="COMP_IntegerComponentController"> 
+    <!-- New attribute to provide support multiple components in the same VF Page -->
+    <apex:attribute name="intKey" type="String" assignTo="{!key}" description="The key given to this component so the page can easily get access to it" />
+
+    <apex:attribute name="intPageController" type="COMP_PageControllerBase" assignTo="{!pageController}" required="true" description="The controller for the page." />
+
+
+    
+    <apex:outputPanel layout="block" style="font-size: 12pt; border: 1pt solid black; width: 250px;" > 
+        <center>
+            <apex:outputText value="This is in the component." /> 
+            <br/>
+            <apex:outputText value="Initial int value: {!intValue}" />
+        </center> 
+    </apex:outputPanel>
+</apex:component>

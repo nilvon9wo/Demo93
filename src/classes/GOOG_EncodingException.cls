@@ -1,0 +1,1 @@
+public class GOOG_EncodingException extends Exception {}

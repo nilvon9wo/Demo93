@@ -1,0 +1,16 @@
+<!-- See VisualForce Workbook, page 38 -->
+<apex:page controller="VF_AccountWithContactsController">
+    <apex:form >
+        <apex:dataList value="{!accountList}" var="account">
+            <apex:commandLink action="{!accountClicked}" reRender="ContactDetail">
+                <apex:outputText value="{!account.name}"/> 
+                <apex:param name="id" value="{!account.id}" assignTo="{!selectedAccountId}"/> 
+            </apex:commandLink>
+        </apex:dataList>
+    </apex:form>
+    <apex:outputPanel id="ContactDetail">
+        <apex:repeat value="{!contactList}" var="contact">
+            <p>{!contact.firstName & ' ' & contact.lastName}</p> 
+        </apex:repeat>
+    </apex:outputPanel>
+</apex:page>

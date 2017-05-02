@@ -1,0 +1,8 @@
+<apex:component controller="VF_CustomComponentController">
+	<apex:attribute name="componentValue" description="Attribute on the component." type="String" required="required" assignTo="{!controllerValue}" />
+	<apex:pageBlock title="VisualForce Custom Component with a Custom Controller">
+		<p><code>componentValue</code>  is "{!componentValue}".</p>
+		<p><code>controllerValue</code> is "{!controllerValue}".</p>
+	</apex:pageBlock>
+	<apex:pageMessage severity="info" strength="3">Notice that the controllerValue has been upper cased using an Apex method.</apex:pageMessage>
+</apex:component>

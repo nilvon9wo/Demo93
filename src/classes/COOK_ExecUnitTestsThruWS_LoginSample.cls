@@ -1,0 +1,28 @@
+/**
+ *	Calling Salesforce Web Services Using Apex
+ *	@see http://developer.force.com/cookbook/recipe/calling-salesforce-web-services-using-apex
+ *  @see http://www.salesforce.com/us/developer/docs/apexcode/Content/apex_classes_restful_http_testing_httpcalloutmock.htm
+ *  @see http://salesforce-evershine-knowledge.blogspot.hu/2012/10/testing-web-service-callouts.html
+ **/
+public with sharing class COOK_ExecUnitTestsThruWS_LoginSample 
+{
+    public class EchoStringResponse_element  
+    {
+        public String[] metadataServerUrl = new String[]{'metadataServerUrl','https://na15.salesforce.com/services/Soap/m/28.0/00Di0000000bmrB'};
+        public String[] passwordExpired = new String[]{'passwordExpired','false'};
+        public String[] sandbox = new String[]{'sandbox','false'}; 
+        public String[] serverUrl = new String[]{'serverUrl', 'https://na15.salesforce.com/services/Soap/u/28.0/00Di0000000bmrB'};
+        public String[] sessionId = new String[]{'sessionId','00Di0000000bmrB!AQMAQGkKk2ZiHDg7Va6dttNumT3fHl5KJWobeh9LWu7OOnN6ZhrPpFCYygirLFBA2QabWcPh9ggiLt1rx4MnGSDmuLppB2iM'};
+        public String[] userId = new String[]{'userId','005i0000001AfV5AAK'};
+        public String[] userInfo = new String[]{'userInfo','[accessibilityMode=false,accessibilityMode_type_info=(accessibilityMode, http://www.w3.org/2001/XMLSchema, boolean, 1, 1, false),apex_schema_type_info=(urn:partner.soap.sforce.com, true, false),currencySymbol=$,currencySymbol_type_info=(currencySymbol, http://www.w3.org/2001/XMLSchema, string, 1, 1, true),field_order_type_info=(accessibilityMode, currencySymbol, orgAttachmentFileSizeLimit, orgDefaultCurrencyIsoCode, orgDisallowHtmlAttachments, orgHasPersonAccounts, organizationId, organizationMultiCurrency, organizationName, profileId, ...),orgAttachmentFileSizeLimit=5242880,orgAttachmentFileSizeLimit_type_info=(orgAttachmentFileSizeLimit, http://www.w3.org/2001/XMLSchema, int, 1, 1, false),orgDefaultCurrencyIsoCode=USD, orgDefaultCurrencyIsoCode_type_info=(orgDefaultCurrencyIsoCode, http://www.w3.org/2001/XMLSchema, string, 1, 1, true),orgDisallowHtmlAttachments=false, orgDisallowHtmlAttachments_type_info=(orgDisallowHtmlAttachments, http://www.w3.org/2001/XMLSchema, boolean, 1, 1, false),orgHasPersonAccounts=false,orgHasPersonAccounts_type_info=(orgHasPersonAccounts, http://www.w3.org/2001/XMLSchema, boolean, 1, 1, false),organizationId=00Di0000000bmrBEAQ, organizationId_type_info=(organizationId, urn:partner.soap.sforce.com, ID, 1, 1, false),organizationMultiCurrency=false,organizationMultiCurrency_type_info=(organizationMultiCurrency, http://www.w3.org/2001/XMLSchema, boolean, 1, 1, false),organizationName=EPAM Systems, Inc.,organizationName_type_info=(organizationName, http://www.w3.org/2001/XMLSchema, string, 1, 1, false),profileId=00ei0000000zFjMAAU,profileId_type_info=(profileId, urn:partner.soap.sforce.com, ID, 1, 1, false),roleId=null,roleId_type_info=(roleId, urn:partner.soap.sforce.com, ID, 1, 1, true),sessionSecondsValid=1800,sessionSecondsValid_type_info=(sessionSecondsValid, http://www.w3.org/2001/XMLSchema, int, 1, 1, false),userDefaultCurrencyIsoCode=null, userDefaultCurrencyIsoCode_type_info=(userDefaultCurrencyIsoCode, http://www.w3.org/2001/XMLSchema, string, 1, 1, true),userEmail=brian_kessler@epam.com,userEmail_type_info=(userEmail, http://www.w3.org/2001/XMLSchema, string, 1, 1, false),userFullName=Brian Kessler, userFullName_type_info=(userFullName, http://www.w3.org/2001/XMLSchema, string, 1, 1, false),userId=005i0000001AfV5AAK, userId_type_info=(userId, urn:partner.soap.sforce.com, ID, 1, 1, false),userLanguage=en_US, userLanguage_type_info=(userLanguage, http://www.w3.org/2001/XMLSchema, string, 1, 1, false), userLocale=en_US, userLocale_type_info=(userLocale, http://www.w3.org/2001/XMLSchema, string, 1, 1, false), userName=brian_kessler@93demo.com, userName_type_info=(userName, http://www.w3.org/2001/XMLSchema, string, 1, 1, false), userTimeZone=America/Los_Angeles, userTimeZone_type_info=(userTimeZone, http://www.w3.org/2001/XMLSchema, string, 1, 1, false),userType=Standard, userType_type_info=(userType, http://www.w3.org/2001/XMLSchema, string, 1, 1, false),userUiSkin=Theme3, userUiSkin_type_info=(userUiSkin, http://www.w3.org/2001/XMLSchema, string, 1, 1, false)]'};
+        private String[] metadataServerUrl_type_info = new String[]{'metadataServerUrl','http://www.w3.org/2001/XMLSchema','string','1','1','true'};
+        private String[] passwordExpired_type_info = new String[]{'passwordExpired','http://www.w3.org/2001/XMLSchema','boolean','1','1','false'};
+        private String[] sandbox_type_info = new String[]{'sandbox','http://www.w3.org/2001/XMLSchema','boolean','1','1','false'};
+        private String[] serverUrl_type_info = new String[]{'serverUrl','http://www.w3.org/2001/XMLSchema','string','1','1','true'};
+        private String[] sessionId_type_info = new String[]{'sessionId','http://www.w3.org/2001/XMLSchema','string','1','1','true'};
+        private String[] userId_type_info = new String[]{'userId','urn:partner.soap.sforce.com','ID','1','1','true'};
+        private String[] userInfo_type_info = new String[]{'userInfo','urn:partner.soap.sforce.com','GetUserInfoResult','0','1','false'};
+        private String[] apex_schema_type_info = new String[]{'urn:partner.soap.sforce.com','true','false'};
+        private String[] field_order_type_info = new String[]{'metadataServerUrl','passwordExpired','sandbox','serverUrl','sessionId','userId','userInfo'};
+    }
+}

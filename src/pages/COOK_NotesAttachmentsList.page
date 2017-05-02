@@ -1,0 +1,31 @@
+<!-- 
+	Uploading an Attachment using Visualforce and a Custom Controller in Salesforce
+	@see http://cloudisfuture.blogspot.hu/2012/04/upload-file-as-attachment-to-record.html
+ -->
+<apex:page standardController="Account" extensions="COOK_UploadAttachmentUsingVFPageCntrlExt">
+	<apex:form >
+		<apex:pageBlock title="Notes & Attachments">
+		
+			<apex:pageBlockButtons >
+				<apex:commandButton value="Add Note" />
+				<apex:commandButton value="Attach File" />
+				<apex:commandButton value="View All" />
+			</apex:pageBlockButtons>
+			
+			<apex:pageBlockTable value="{!attachmentModelList}" var="model">
+				<apex:column headerValue="SerialNumber" value="{!model.serialNumber}"     />
+				<apex:column headerValue="Name"         value="{!model.attachment.name}"  />
+				<apex:column headerValue="Type">
+						<apex:outputText value="{!model.attachment.ContentType}" />
+				</apex:column>
+				<apex:column headerValue="Owner">
+						<apex:outputText value="{!model.attachment.OwnerId}" />
+				</apex:column>
+				<apex:column headerValue="ParentId">
+						<apex:outputText value="{!model.attachment.ParentId}" />
+				</apex:column>
+			</apex:pageBlockTable>
+			
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

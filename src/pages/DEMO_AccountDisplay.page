@@ -1,0 +1,7 @@
+<!-- See VisualForce WorkBook, page 13 onwards -->
+<apex:page standardController="Account">
+    <p>Hello {! $User.firstName}!</p>
+    <p>You are viewing a VisualForce page embedded within the {! Account.name} account.</p>
+    <p>Here's the Ticker Symbol field: {! Account.tickerSymbol }</p>
+    <p>Here's the owner of this account: {! Account.owner.name }</p>
+</apex:page>

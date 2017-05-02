@@ -1,0 +1,17 @@
+<apex:page id="page" standardController="Account" extensions="COOK_UploadAttachmentAssignmentCntrlExt">
+	<apex:form id="pageBlockForm">
+		<apex:pageBlock title="Upload Attachment">
+			<apex:inputFile id="fileToUpload" value="{!fileBody}" fileName="{!fileName}" style="width:100%" />
+			<apex:commandButton value="Upload Attachment" action="{!UploadFile}" />
+		</apex:pageBlock>
+	</apex:form>
+	<script>
+		alert(!isSaved);
+		if ({!isSaved} == true)
+		{
+			alert({!isSaved});
+			window.opener.location.reload();
+			window.close();
+		}
+	</script>
+</apex:page>

@@ -1,0 +1,5 @@
+<!-- See VisualForce Workbook, page 33 -->
+<apex:page >
+    <c:DEMO_BoxedText borderWidth="1" text="Example 1"/>
+    <c:DEMO_BoxedText borderWidth="30" text="Example 2"/>
+</apex:page>

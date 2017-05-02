@@ -1,0 +1,11 @@
+<!--
+	 Retrieve a List of Objects using Apex
+	 @see http://developer.force.com/cookbook/recipe/retrieve-a-list-of-objects-using-apex
+ -->
+<apex:page controller="COOK_RetrieveListOfSObjectsPageCtrl">
+	<apex:form >
+		<apex:selectList value="{!value}" size="1">
+			<apex:selectOptions value="{!objectOptionsList}" /> 
+		</apex:selectList>
+	</apex:form> 
+</apex:page>

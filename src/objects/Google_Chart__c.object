@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>An attempt to put various google charts in one place</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denmark</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Google_Chart_Map__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+  &quot;http://chart.googleapis.com/chart?chs=440x220&amp;cht=map:auto&amp;chco=B3BCC0|FFC726|518274|3366CC|DC3912|FF9900|109618&amp;chld=US|AU|GB|FR|HK|DK&amp;chdl=United States|Australia|United Kingdom|France|Hong Kong|Denmark&amp;chm=a,000000,0,&quot; 
+    &amp; Text(Selected_Country_Number__c) &amp;&quot;,7&amp;chtt=World+Map&quot;,
+  &quot;World+Map&quot;
+  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Chart Map</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Dial_Chart__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+          &quot;https://chart.googleapis.com/chart?chxl=0:|Low||Target+%3D&quot;
+                  &amp; Text(Sales_Target__c) 
+                  &amp; &quot;&amp;chxt=y&amp;chs=300x150&amp;cht=gm&amp;chds=0,&quot;
+                  &amp; Text(Sales_Target__c) 
+                  &amp; &quot;&amp;chd=t0:&quot;
+                  &amp; Text(Sales_Actual__c) 
+                  &amp; &quot;&amp;chl=Actual+%3D&quot;
+                  &amp; Text(Sales_Actual__c) 
+                  &amp; &quot;&amp;chtt=Sales+Target&quot;,
+         &quot;Whats this for&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Dial Chart</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Line_Chart__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+            &quot;https://chart.googleapis.com/chart?chs=440x220&amp;cht=lxy&amp;chco=3072F3,FF0000&amp;chds=0,100,0,66&amp;chd=t:0,20,40,60,80%7C&quot; 
+                &amp; Text(Number_1__c) &amp; &quot;,&quot; 
+                &amp; Text(Number_2__c) &amp; &quot;,&quot; 
+                &amp; Text(Number_3__c) &amp; &quot;,&quot; 
+                &amp; Text(Number_4__c) &amp; 
+                &quot;%7C-1%7C5,10,22,35,85&amp;chdl=Actual+Sales%7CTarget+Sales&amp;chdlp=b&amp;chls=2,4,1%7C1&amp;chma=5,5,5,25&amp;chtt=Example+Line+Chart&quot;,
+            &quot;Whatsthisdo&quot;
+ )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Line Chart</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Pie_Chart__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+            &quot;http://chart.apis.google.com/chart?cht=p3&amp;chd=t:&quot; &amp; 
+              Text(Number_1__c) &amp; &quot;,&quot; &amp; 
+              Text(Number_2__c) &amp; &quot;,&quot; &amp; 
+              Text(Number_3__c) &amp; &quot;,&quot; &amp; 
+              Text(Number_4__c) &amp; 
+              &quot;&amp;chs=275x100&amp;chf=bg,s,F3F3EC&amp;chl=Won|Lost&amp;chco=5555ff&quot;, 
+           &quot;chart text&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Pie Chart</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Number 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Number 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Number 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Number 4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Performance_Actual__c</fullName>
+        <externalId>false</externalId>
+        <label>Performance Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Performance_Dial__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+          &quot;https://chart.googleapis.com/chart?chxl=0:|Low+sales||Target+met&amp;chxt=y&amp;chs=300x150&amp;cht=gm&amp;chds=0,&quot;
+                    &amp; Text(Performance_Target__c) 
+                    &amp; &quot;&amp;chd=t0:&quot;&amp; Text(Performance_Actual__c) 
+                    &amp; &quot;&amp;chl=Actual&amp;chtt=Performance+Target&quot;,
+          &quot;Whats this for&quot;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Performance Dial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Performance_Target__c</fullName>
+        <externalId>false</externalId>
+        <label>Performance Target</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Actual__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Target__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Target</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Country_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Country__c,
+    &apos;Australia&apos;,1,
+    &apos;France&apos;,2,
+    &apos;United Kingdom&apos;,3,
+    &apos;Hong Kong&apos;,4,
+    &apos;Denmark&apos;,5,
+    0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Selected Country  Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Google Chart</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Google Chart Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Google Charts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

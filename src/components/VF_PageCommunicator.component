@@ -1,0 +1,19 @@
+<!-- 
+ - Controller Component Communication
+ - @see http://wiki.developerforce.com/page/Controller_Component_Communication
+ -->
+<apex:component controller="VF_ComponentControllerImplemented">
+	<apex:attribute name="pageControllerIndicator" type="VF_PageControllerBase" assignTo="{!pageController}" required="true" description="The controller for the page." />
+
+	<!-- Extends to support multiple VisualForce components on a single VF Page.  -->
+	<apex:attribute name="keyIndicator" type="String" assignTo="{!key}" required="false" description="The key given to this component so the page can easily get access to it" />	
+	
+	
+	<apex:outputPanel layout="block" styleClass="componentOutputPanel" >
+		<center>
+			<apex:outputText value="This is in a component." />
+			<br/>
+			<apex:outputText value="Initial int value: {!intValue}" />
+		</center>
+	</apex:outputPanel>	
+</apex:component>

@@ -1,0 +1,7 @@
+<!-- 
+ - How to get in a Visualforce page controller a value from a custom component controller?
+ - @see http://stackoverflow.com/questions/6103363/how-to-get-in-a-visualforce-page-controller-a-value-from-a-custom-component-cont
+ -->
+<apex:component controller="VF_SelectedAccountComponentController">
+	<apex:attribute name="userSelectedAccount" type="VF_SelectedAccountShell" description="Selected Account" assignTo="{!selectedAccountShell}" />
+</apex:component>

@@ -1,0 +1,9 @@
+<!--  See VisualForce Workbook, page 32 -->
+<apex:component >
+	<apex:stylesheet value="{!$Resource.DEMO_BoxedText_CSS}" />
+	<apex:attribute name="text" description="The contents of the box." type="String" required="true" />
+	<apex:attribute name="borderWidth" description="The width of the border." type="Integer" required="true" />
+	<div class="BoxedText" style="border-width:{!borderWidth}px">
+		<apex:outputText value="{!text}"/>  
+	</div>	 
+</apex:component>

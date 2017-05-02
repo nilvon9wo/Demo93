@@ -1,0 +1,7 @@
+<!--
+ - How to get in a Visualforce page controller a value from a custom component controller?
+ - @see http://stackoverflow.com/questions/6103363/how-to-get-in-a-visualforce-page-controller-a-value-from-a-custom-component-cont
+ -->
+<apex:page standardController="Account" extensions="VF_SelectedAccountPageControllerExt">
+    <c:VF_SelectedAccountComponent userSelectedAccount="{!instanceOfSelectedAccount}" /> 
+</apex:page>

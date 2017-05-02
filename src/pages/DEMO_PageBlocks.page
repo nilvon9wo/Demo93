@@ -1,0 +1,28 @@
+<apex:page sidebar="false">
+  <apex:pageBlock title="A Block Title">
+      <apex:pageBlockButtons title="Page Block Buttons">
+          [The developer could/should put some buttons here!]
+      </apex:pageBlockButtons>
+      <apex:pageBlockSection title="A Section Title">
+          I'm three components (i.e. elements) deep!
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="A New Section">
+          This is another section.
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Additional Visualforce components">
+          <apex:pageBlockSectionItem >
+              The contents of the page block section item.
+          </apex:pageBlockSectionItem>
+          <apex:tabPanel title="Tab Panel">
+              [The developer could/should put some tabs here!]
+          </apex:tabPanel>          
+          <apex:toolbar >
+              [The developer could/should put some tools here!]
+          </apex:toolbar>
+          <apex:panelGrid title="Panel Grid">
+              [The developer could/should put some panels here!]
+          </apex:panelGrid> 
+      </apex:pageBlockSection>
+      
+  </apex:pageBlock>
+</apex:page>

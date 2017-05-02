@@ -1,0 +1,30 @@
+<!-- See VisualForce Workbook, page 24 -->
+<apex:page standardController="Account" sidebar="false" showHeader="false">
+    <!-- These three stylesheets are currently equivalent, but referenced in different ways 
+        <apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css" />
+        <apex:stylesheet value="{!$Resource.DEMO_StyledAccount_CSS}" />
+    -->    
+        <apex:stylesheet value="{!URLFOR($Resource.DEMO_StyledAccount_ZIP,'DEMO_StyledAccount_CSS.css')}" />
+    <apex:pageBlock >
+        <h1>Styled Account Page</h1>
+        <p>Great!</p>
+        <apex:pageBlockSection title="Data Table">
+            <apex:dataTable value="{!Account.contacts}" var="contact">
+                <apex:column value="{!contact.name}"/>
+                <apex:column value="{!contact.phone}"/>
+            </apex:dataTable>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Data List">
+            <apex:dataList value="{!Account.contacts}" var="contact">
+                <apex:outputText value="{!contact.name}"/>
+            </apex:dataList>
+                </apex:pageBlockSection>
+        <apex:pageBlockSection title="Repeat">
+            <ul>
+                <apex:repeat value="{!Account.contacts}" var="contact">
+                    <li>{!contact.name}</li>
+                </apex:repeat>
+            </ul>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

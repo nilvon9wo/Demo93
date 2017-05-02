@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Google Chart</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Google Charts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denmark</masterLabel>
+            <translation><!-- Denmark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France</masterLabel>
+            <translation><!-- France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hong Kong</masterLabel>
+            <translation><!-- Hong Kong --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom</masterLabel>
+            <translation><!-- United Kingdom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Google Chart Map --></label>
+        <name>Google_Chart_Map__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Dial Chart --></label>
+        <name>Google_Dial_Chart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Line Chart --></label>
+        <name>Google_Line_Chart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Pie Chart --></label>
+        <name>Google_Pie_Chart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number 1 --></label>
+        <name>Number_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number 2 --></label>
+        <name>Number_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number 3 --></label>
+        <name>Number_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number 4 --></label>
+        <name>Number_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Actual --></label>
+        <name>Performance_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Dial --></label>
+        <name>Performance_Dial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Target --></label>
+        <name>Performance_Target__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Actual --></label>
+        <name>Sales_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Target --></label>
+        <name>Sales_Target__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selected Country  Number --></label>
+        <name>Selected_Country_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Google Chart Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Google Dial --></label>
+            <section>Google Dial</section>
+        </sections>
+        <sections>
+            <label><!-- Google Map --></label>
+            <section>Google Map</section>
+        </sections>
+        <sections>
+            <label><!-- Line and Pie Charts --></label>
+            <section>Line and Pie Charts</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
